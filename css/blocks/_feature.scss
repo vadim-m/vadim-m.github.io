@@ -1,0 +1,25 @@
+.feature__desc {
+  text-align: center;
+}
+
+.feature__pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px; 
+}
+
+.feature__title {
+  font-size: 24px;
+  color: #2f3234;
+  font-family: "Lifehack-Medium";
+  font-weight: 500;
+}
+
+.feature__text {
+  line-height: 1.7;
+  font-size: 14px;
+  color: #2f3234;
+  font-family: "Ubuntu";
+  font-weight: 300;
+  text-align: center;
+}

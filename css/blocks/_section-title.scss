@@ -1,0 +1,14 @@
+.section-title {
+  font-size: 72px;
+  font-family: 'Gagalin-Regular';
+  color: $yellow;
+  line-height: 1; 
+
+  &--color-black {
+    color: #2f3234;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}

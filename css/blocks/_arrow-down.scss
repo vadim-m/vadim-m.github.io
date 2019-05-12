@@ -1,0 +1,11 @@
+.arrow-down {
+  display: block;
+  height: 15px;
+  width: 30px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/img/icons/arrow-scroll.svg');
+  background-repeat: no-repeat;
+}
