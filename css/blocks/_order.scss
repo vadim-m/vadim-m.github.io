@@ -1,0 +1,34 @@
+.order {
+  height: 100vh;
+  background-image: url('../../img/form/form-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order__container {
+  @include tablets {
+  }
+}
+
+.order__form-button {
+  text-decoration: none;
+  border: 0;
+  margin-left: rem(20px);
+}
+
+.order__form-button-reset {
+  text-transform: none;
+  background: transparent;
+  border: 0;
+  font-size: rem(14px);
+  color: $white;
+  margin: 0 rem(10px);
+}
+
+
+.order__form-btn {
+  @include phones {
+    margin-top: rem(35px);
+  }
+}

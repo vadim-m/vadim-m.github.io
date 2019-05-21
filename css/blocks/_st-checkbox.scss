@@ -1,0 +1,53 @@
+.st-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  // margin: rem(20px) 0 0 rem(20px);
+  margin-left: rem(20px);
+
+  &__input {
+    width: auto;
+    width: rem(16px);
+    height: rem(16px);
+    opacity: 0;
+    margin-left: rem(-16px);
+
+    &:checked{
+      & ~ .st-checkbox__fake {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__fake {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    background-color: $white;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background-image: url('../../img/icons/check.png'); 
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    padding: 0 0 0 rem(10px);
+    font-size: rem(14px);
+  }
+}

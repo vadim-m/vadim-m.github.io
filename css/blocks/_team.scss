@@ -1,0 +1,130 @@
+.team {
+  height: 100vh;
+  background-image: url('../../img/team/team-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
+  &__content {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #3e4042, $alpha: .93);
+    padding: 7.5% 8% 8% 10%;
+
+    @include tablets {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+} 
+
+.team__item {
+  color: $white;
+  margin-top: rem(30px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+  &-title {
+    font-family: 'Gagalin-Regular';
+    font-size: rem(14px);
+    position: relative;
+    display: inline-flex;
+    
+    @include tablets {
+      font-size: rem(24px);
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 4px solid transparent;
+      border-bottom: none;
+      border-top: 5px solid rgba($color: #f9b43b, $alpha: 1.0);
+      position: absolute;
+      top: rem(8px);
+      left: rem(-15px);
+    }
+    
+  }
+
+  &--active {
+
+    .team__item-title {
+      color: $yellow;
+    }
+
+    .team__item-info {
+      height: 100%;
+
+    }
+
+    .team__item-title::before {
+      transform: rotate(180deg);
+    }
+  }
+  
+}
+
+.team__item-info {
+  display: flex;
+  margin-top: rem(15px);
+  height: 0;
+  overflow: hidden;
+  justify-content: flex-start;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+.team__item-box {
+  flex: 0 0 auto;
+  font-size: rem(14px);
+  margin-left: rem(25px);
+  font-family: "Ubuntu";
+
+  @include tablets {
+    margin-top: rem(10px);
+    margin-left: 0;
+  }
+}
+
+.team__item-work {
+  font-weight: 700; 
+}
+
+.team__item-desc {
+  max-width: rem(220px);
+  line-height: 1.8;
+  margin-top: rem(10px);
+  font-weight: 300;
+
+  @include tablets {
+    max-width: rem(340px);
+  }
+}
+
+.team__item-avatar {
+  border-radius: 50%;
+  width: rem(100px);
+	height: rem(100px);
+  border-radius: 50%;
+  background-size: cover;
+  overflow: hidden;
+}

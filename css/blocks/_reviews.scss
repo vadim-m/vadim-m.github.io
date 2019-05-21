@@ -11,12 +11,18 @@
   background-size: cover; 
   width: 25%;
   height: 50%;
-  padding: 50px 20px;
+  padding: rem(50px) rem(20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 1;
   position: relative;
+   
+  @include tablets {
+    width: 50%;
+    height: 25%;
+    padding: 2% 7%;
+  }
 
   &:after  {
     content: '';
@@ -41,14 +47,30 @@
 .reviews__content {
   opacity: 0;
   transform: scale(0.3);
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .reviews__title {
-  font-size: 14px;
+  font-size: rem(14px);
   color: #ffffff;
   font-family: "Gagalin-Regular";
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: 6%;
+  }
+
+  @include phones {
+    font-size: rem(24px);
+    margin-bottom: rem(25px);
+  }
 }
 
 .reviews__desc {
@@ -57,7 +79,15 @@
   color: #ffffff;
   font-family: "Ubuntu";
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
+
+  @include tablets {
+    margin-bottom: 6%;
+  }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .reviews__btn {

@@ -3,6 +3,11 @@ $orange: #e45028;
 $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
+$white: #fff;
+
+//breakponts
+$tablets: 768px;
+$phones: 480px;
 
 //normalize
 @import "layout/normalize.scss";
@@ -11,13 +16,27 @@ $red: #e35028;
 @import "layout/fonts.scss";
 @import "layout/layout.scss";
 
+//media
+@import "mixins/media.scss";
+
 //blocks
-@import "blocks/hero.scss";
-@import "blocks/header.scss";
-@import "blocks/menu.scss";
-@import "blocks/btn.scss";
-@import "blocks/section-title.scss";
-@import "blocks/arrow-down.scss";
-@import "blocks/best.scss";
-@import "blocks/feature.scss";
-@import "blocks/reviews.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/btn.scss";
+@import "./blocks/section-title.scss";
+@import "./blocks/arrow-down.scss";
+@import "./blocks/best.scss";
+@import "./blocks/feature.scss";
+@import "./blocks/reviews.scss";
+@import "./blocks/hamburger-menu-link.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/team.scss";
+@import "./blocks/menu-acco.scss";
+@import "./blocks/form.scss";
+@import "./blocks/order.scss";
+@import "./blocks/st-radio.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/st-checkbox.scss";
+@import "./blocks/socials.scss";

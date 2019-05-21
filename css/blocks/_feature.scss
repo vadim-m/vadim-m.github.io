@@ -1,25 +1,49 @@
+.feature {
+  @include phones {
+    display: flex;
+    text-align: left;
+  }
+}
+
 .feature__desc {
   text-align: center;
+
+  @include phones {
+    text-align: left;
+    width: 72%
+  }
 }
 
 .feature__pic {
   display: flex;
   justify-content: center;
-  margin-bottom: 35px; 
+  margin-bottom: rem(35px); 
+
+  @include phones {
+    width: 28%
+  }
 }
 
 .feature__title {
-  font-size: 24px;
+  font-size: rem(24px);
   color: #2f3234;
   font-family: "Lifehack-Medium";
   font-weight: 500;
+  margin-bottom: rem(20px);
+
+  
 }
 
 .feature__text {
   line-height: 1.7;
-  font-size: 14px;
+  font-size: rem(14px);
   color: #2f3234;
   font-family: "Ubuntu";
   font-weight: 300;
   text-align: center;
+  
+  @include phones {
+    text-align: left;
+  }
+
 }

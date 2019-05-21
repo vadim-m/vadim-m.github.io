@@ -1,0 +1,52 @@
+.st-radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  // margin: rem(20px) 0 0 rem(20px);
+  margin-left: rem(20px);
+
+  &__input {
+    width: auto;
+    width: rem(16px);
+    height: rem(16px);
+    opacity: 0;
+    margin-left: -16px;
+
+    &:checked {
+      & ~ .st-radio__fake {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__fake {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background-color: $white;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #e34f27;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: 0.3s;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    padding: 0 0 0 rem(10px);
+    font-size: rem(14px);
+  }
+}

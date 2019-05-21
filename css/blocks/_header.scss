@@ -1,5 +1,5 @@
 .header {
-  padding-top: 10px;
+  padding-top: rem(10px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,9 +11,14 @@
   align-items: center;
 }
 
-.header__order-btn {
-  margin-left: 15px;
+.header__links {
+  display: flex;
+  align-items: center;
+}
 
+.header__order-btn {
+  margin-left: rem(15px);
+  font-size: rem(13px);
   &:hover{
     background-color: #c1401e;
   }

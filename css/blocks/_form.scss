@@ -1,0 +1,81 @@
+.form {
+  width: 100%;
+  max-width: 940px;
+  color: $white;
+
+  @include tablets {
+    padding: 0 20%;
+  }
+  
+  &__tag {
+    display: flex;
+    margin-left: (-20px);
+    color: $white;
+    font-size: rem(14px);
+    color: #ffffff;
+    font-family: "Ubuntu";
+    font-weight: 300;
+    // padding: 0 20%;
+    
+    @include tablets {
+      flex-direction: column;
+      padding: 0 20%;
+    }
+
+    @include phones {
+      padding: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    margin-top: (20px);
+
+    @include phones {
+      justify-content: center;
+    }
+  }
+
+  &__col {
+    width: 50%;
+
+      @include tablets {
+        width: 100%;
+      }
+  }
+
+  &__label {
+    display: block;
+    width: 100%;
+    margin-left: rem(20px);
+
+    
+  }
+
+  &__text {
+    font-size: rem(14px);
+    
+  }
+
+  &__input {
+    margin: rem(10px) 0 0;
+    width: 100%;
+    padding: rem(5px) rem(20px);
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgba($color: #d1cfcb, $alpha: 1.0);
+
+    &-textarea {
+      height:rem(110px);
+      resize: none;
+      vertical-align:top;
+    }
+
+    &:focus { 
+      border: 2px solid #f9b43b;
+    }
+  }
+
+}

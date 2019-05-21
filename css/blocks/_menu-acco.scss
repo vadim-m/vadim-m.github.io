@@ -1,0 +1,74 @@
+.menu-acco {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../img/menu/menu-bg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-acco__title {
+  margin: rem(100px) 0 0 rem(100px);
+  color: $white;
+  display: block;
+
+  @include phones {
+    margin: rem(40px) 0 0 rem(40px);
+  }
+}
+
+.menu-acco__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-acco__list, .menu-acco__item {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-acco__item-title {
+  line-height: rem(80px);
+  white-space: nowrap;
+  font-family: 'Gagalin-Regular';
+  font-size: rem(40px);
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+  margin-bottom: rem(-40px);
+  
+}
+
+.menu-acco__trigger {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: rem(80px);
+  align-items: flex-end;
+  position: relative;
+  
+}
+
+.menu-acco__item--active {
+  .menu-acco__desc {
+    width: rem(550px);
+    padding: 10% 6% 25%;
+  }
+
+  @include tablets {
+    width: 0;
+  }
+}
+
+.menu-acco__desc {
+  width: 0;
+  line-height: 2;
+  font-size: rem(14px);
+  font-family: "Ubuntu";
+  font-weight: 300;
+  background-color: rgba($color: #2f3133, $alpha: .93);
+  overflow: hidden;
+}
