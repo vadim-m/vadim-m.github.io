@@ -1,0 +1,53 @@
+.arrow{
+
+  &--down {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0; 
+
+    &__icon {
+      justify-content: flex-end;
+      display: inline-block;
+      text-align: center;
+      height: rem(15px);
+      width: rem(30px);
+    } 
+  }
+
+
+  &--left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+
+    &__icon {
+      display: inline-block;
+      transform: rotate(90deg);
+      fill: black;
+      
+      
+      height: rem(15px);
+      width: rem(30px);
+    } 
+  }
+
+
+  &--right {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &__icon {
+      display: inline-block;
+      transform: rotate(-90deg);
+      fill: black;
+      
+      
+      height: rem(15px);
+      width: rem(30px);
+    } 
+  }
+
+
+} 

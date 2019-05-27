@@ -3,17 +3,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .header__buttons {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+ 
 }
 
 .header__links {
   display: flex;
   align-items: center;
+  
 }
 
 .header__order-btn {
@@ -21,5 +25,9 @@
   font-size: rem(13px);
   &:hover{
     background-color: #c1401e;
+  }
+
+  @include tablets {
+    display: none;
   }
 }

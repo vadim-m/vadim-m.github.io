@@ -5,13 +5,17 @@
   line-height: 1; 
   margin-bottom: rem(45px);
 
-@include phones {
-  font-size: rem(50px);
-  margin-bottom: rem(30px);
-}
+  @include phones {
+    font-size: rem(50px);
+    margin-bottom: rem(30px);
+  }
 
   &--color-black {
     color: #2f3234;
+  }
+
+  &--color-white {
+    color: #fff;
   }
 
   &--centered {
@@ -20,8 +24,13 @@
 }
 
 .section-title__mobile {
-  font-size: rem(63px);
+  font-size: rem(72px);
   font-family: 'Gagalin-Regular';
   color: $yellow;
   line-height: 1;
+
+  @include phones {
+    font-size: rem(63px);
+    margin-bottom: rem(30px);
+  }
 }

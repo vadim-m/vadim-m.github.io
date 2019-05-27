@@ -14,18 +14,19 @@ $phones: 480px;
 
 // setups
 @import "layout/fonts.scss";
-@import "layout/layout.scss";
+// @import "layout/layout.scss";
 
 //media
 @import "mixins/media.scss";
 
 //blocks
+@import "layout/layout.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/header.scss";
 @import "./blocks/menu.scss";
 @import "./blocks/btn.scss";
 @import "./blocks/section-title.scss";
-@import "./blocks/arrow-down.scss";
+@import "./blocks/arrow.scss";
 @import "./blocks/best.scss";
 @import "./blocks/feature.scss";
 @import "./blocks/reviews.scss";
@@ -40,3 +41,5 @@ $phones: 480px;
 @import "./blocks/footer.scss";
 @import "./blocks/st-checkbox.scss";
 @import "./blocks/socials.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/burger.scss";

@@ -55,14 +55,14 @@
             <img src="./img/hero/hero-burger.png" alt="burger">
           </div>
           <div class="hero__content-text">
-            <h1 class="section-title__mobile">мы делаем</h1>
+            <h1 class="section-title section-title__mobile">мы делаем</h1>
             <div class="hero__desc">
               натуральные бургеры
             </div>
           </div>
         </div>
-        <a href="#" class="arrow-down">
-          <svg class="arrow-down__icon">
+        <a href="#" class="arrow--down">
+          <svg class="arrow--down__icon">
             <use xlink:href="../img/icons/sprite.svg#arrow-scroll">
             </use>
           </svg>  
@@ -115,6 +115,51 @@
         </ul>
       </div>
     </section> 
+    <section class="section slider">
+        <a href="#" class="arrow--left">
+            <svg class="arrow--left__icon">
+              <use xlink:href="../img/icons/sprite.svg#arrow-scroll">
+              </use>
+            </svg>  
+        </a>
+        <div class=" container slider__container">
+          <div class="slider__content">
+              <div class="slider__left">
+                  <div class="burger__left-wrap">
+                      <div class="burger__comp">
+                          <svg class="burger__comp-icon">
+                              <use xlink:href="../img/icons/sprite.svg#burger">
+                              </use>
+                          </svg>
+                          <div class="burger__comp-text">состав</div>
+                      </div>
+                      <div class="burger__value">
+                        <svg class="burger__value-icon">
+                            <use xlink:href="../img/icons/sprite.svg#kkal">
+                            </use>
+                        </svg>
+                        <div class="burger__value-weight">1200</div>
+                        <div class="burger__value-unit">kkal</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__right">
+                    <div class=" section-title section-title--color-white">dark beef burger</div>
+                    <div class="burger__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                    <div class="burger__order">
+                      <div class="burger__order-price"><span class="burger__order-num">500</span><span class="burger__order-curr"> рублей</span></div>
+                      <a class="btn burger__order-btn">заказать</a>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <a href="#" class="arrow--right">
+            <svg class="arrow--right__icon">
+              <use xlink:href="../img/icons/sprite.svg#arrow-scroll">
+              </use>
+            </svg>  
+        </a>
+    </section>
     <section class="section team">
       <div class="team__content">
           <h1 class="team__content-title section-title">команда</h1>
@@ -334,7 +379,7 @@
                 </div>
                 <!--second form__row-->
                   <div class="form__row">
-                      <label for="" class="form__label">
+                      <label  class="form__label">
                           <span class="form__text">Улица</span>
                           <input type="text" class="form__input">
                       </label>
@@ -372,7 +417,7 @@
                 <div class="form__row">
                   <label  class="form__label">
                     <span class="form__text">Комментарий</span>
-                    <textarea class="form__input form__input-textarea " type="textarea"></textarea>
+                    <textarea class="form__input form__input-textarea "></textarea>
                   </label>
                 </div>
                 <div class="form__row order__form-btn">
@@ -450,5 +495,43 @@
       </footer>
     </section>
   </div>
+  <script>
+    
+    var trigger = document.querySelector('.hamburger-menu-link');
+    var nav = document.querySelector('nav');
+    trigger.onclick = function(e){
+      console.log(nav.className);
+      console.log(trigger.className);
+      e.preventDefault();
+      if (nav.className == 'menu') {
+        nav.className = 'menu--active';
+        document.body.style.overflow = 'hidden';
+      } else {
+        nav.className = "menu";
+        document.body.style.overflow = 'auto';
+      
+      }
+    }
+      
+
+      // trigger.onclick = function(){
+    //   console.log(nav.className);
+    //   console.log(trigger.className);
+
+    // if (nav.className == 'menu') {
+    //     nav.className = 'menu--active';
+    //     document.body.style.overflow = 'hidden';
+    //   } else {
+    //     nav.className = "menu";
+    //     document.body.style.overflow = 'auto';
+    // }
+
+    // if (trigger.className == 'hamburger-menu-link') {
+    //   nav.className = 'hamburger-menu-link--active';
+    // } else {
+    //   nav.className = "hamburger-menu-link";
+    // }
+
+  </script>
 </body>
 </html>
