@@ -41,6 +41,7 @@
     position: relative;
     display: inline-flex;
     
+    
     @include tablets {
       font-size: rem(24px);
     }
@@ -56,6 +57,11 @@
       position: absolute;
       top: rem(8px);
       left: rem(-15px);
+      transition-duration: 0.5s;
+
+      @include tablets {
+        top: rem(14px);
+      }
     }
     
   }
@@ -64,11 +70,21 @@
 
     .team__item-title {
       color: $yellow;
+      transition-duration: 0.5s;
     }
 
     .team__item-info {
-      height: 100%;
+      opacity: 1;
+      height: 100px;
+      transition-duration: 0;
 
+      @include tablets {
+        height: rem(190px);
+      }
+
+      @include phones {
+        height: rem(185px);
+      }
     }
 
     .team__item-title::before {
@@ -84,6 +100,8 @@
   height: 0;
   overflow: hidden;
   justify-content: flex-start;
+  opacity: 0;
+  transition-duration: 0.5s;
 
   @include tablets {
     display: flex;

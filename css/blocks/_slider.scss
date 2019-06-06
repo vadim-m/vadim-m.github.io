@@ -4,6 +4,7 @@
 
   &__container {
     width: 100%;
+    overflow: hidden;
 
     @include tablets {
       width: 72%;
@@ -17,9 +18,17 @@
 
   &__content {
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  &__item {
+    display: none;
     align-content: center;
     color: #fff;
+    min-width: 100%;
+    transition: 1s;
+    
 
     @include tablets {
       flex-direction: column;
@@ -49,6 +58,7 @@
     justify-content: center;
     font-family: "Gagalin-Regular";
     padding: rem(90px) 0;
+    margin-left: rem(14px);
 
     @include tablets {
       padding: 0;
